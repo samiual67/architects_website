@@ -1,6 +1,186 @@
-.work-sans-font{
-  font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:400px;
-  font-style: normal;
+.work-sans-font {
+   font-family: "Work Sans", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+}
+
+/* shared Styles */
+.display-flex {
+   display: flex;
+   gap: 40px;
+
+}
+
+main>section {
+   margin-top: 130px;
+}
+
+/* Header Styles */
+
+/* Navbar Styles */
+.navbar {
+   /* display: flex; */
+   justify-content: space-between;
+
+   align-items: center;
+}
+
+.band {
+   font-weight: 700;
+   font-size: 3rem;
+}
+
+.nav-item {
+   list-style: none;
+   margin-right: 30px;
+}
+
+.nav-link {
+   text-decoration: none;
+   /* font-size: 18px; */
+   /* medium mean font weight 500px */
+   font-weight: 500;
+
+}
+
+.nav-item-font-color {
+   /* dark 02 */
+   color: #424242;
+}
+
+.bg-ligh {
+   background-color: rgba(255, 144, 14, 0.1);
+
+}
+
+.btn-primary {
+   background-color: rgba(255, 144, 14, 1);
+   color: white;
+   padding: 20px 25px;
+   /* top bottom 20px and left right 25px */
+   font-size: 1.25em;
+   font-weight: 600;
+   /* Semi bold mean 600px */
+   border: none;
+   border-radius: 8px;
+}
+
+.navbar,
+.banner {
+   max-width: 1440px;
+   /* for central align top bottom 0 and left right auto */
+   margin: 0 auto;
+}
+
+/* Banner Related Style */
+.banner-content {
+   /* max-width: 862px; */
+   width: 862px;
+   margin: 0 auto;
+   text-align: center;
+   margin-bottom: 50px;
+
+}
+
+.banner-title {
+   font-weight: 700;
+   font-size: 4rem;
+   /* font 64px so 64/14=4rem */
+   color: #131313;
+}
+
+.banner-description {
+   font-size: 1rem;
+   color: #727272;
+   /* dark 3 */
+}
+
+.banner-image {
+   width: 100%;
+}
+
+/* Team And feature related Style */
+.teams {
+   align-items: center;
+}
+
+.team-img-continer {
+   /* image gap remove */
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 24px;
+   
+   /* when we dont use grid then gap doesn't work */
+}
+
+.our-features {
+   padding-left: 130px;
+   max-width: 537px;
+}
+#quick-list{
+   /* dark 3  */
+   color: #727272;
+}
+
+.feature-color {
+   color: rgba(255, 144, 14, 1);
+}
+
+.section-tittle {
+   padding-bottom: 24px;
+   font-weight: 468;
+   font-size: 2.9rem;
+}
+.features-description{
+   padding-bottom: 32px;
+   font-size: 16px;
+}
+
+/* Responsive Media Query */
+@media screen and (max-width : 576px) {
+
+   .navbar,
+   .nav-links,
+   .teams
+   {
+   flex-direction: column;
+}
+
+.banner-content {
+   width: 100%;
+
+}
+
+.banner-title {
+   font-size: 2rem;
+}
+
+.btn-primary {
+   padding: 12px 20px;
+   font-size: 1rem;
+}
+
+.bg-ligh {
+   background-color: rgba(255, 144, 14, 0.1);
+   min-height: 100vh;
+}
+.team-img-continer{
+   grid-template-columns: repeat(1,1fr);
+}
+
+
+  .our-features {
+    margin-left: 10px;
+    padding-left: 10px;
+  }
+}
+@media screen and ( min-width:576px) and (max-width : 992px) {
+   .teams{
+      flex-direction: column;
+   }
+   .our-features{
+ 
+      margin: 50px auto;
+   }
 }
